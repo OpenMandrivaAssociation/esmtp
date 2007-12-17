@@ -67,7 +67,7 @@ fi
 %defattr(-,root,root)
 %doc AUTHORS README TODO ChangeLog sample.esmtprc
 %_bindir/%name
-%_mandir/man1/%name.1.bz2
-%_mandir/man5/%{name}rc.5.bz2
+%_mandir/man1/%name.1*
+%_mandir/man5/%{name}rc.5*
 
 
