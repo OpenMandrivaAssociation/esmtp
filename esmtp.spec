@@ -11,7 +11,6 @@ Url:		http://esmtp.sourceforge.net
 Source0:	%name-%version.tar.bz2
 License:	GPL
 Group:		Networking/Mail
-BuildRoot:	%_tmppath/%name-%version-%release-buildroot
 BuildRequires:	libesmtp-devel
 
 %description
