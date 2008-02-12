@@ -15,7 +15,6 @@ BuildRoot:	%_tmppath/%name-%version-%release-buildroot
 BuildRequires:	libesmtp-devel
 
 %description
-
 ESMTP is a user configurable relay-only Mail Transfer Agent (MTA) with a
 sendmail-compatible syntax. It's based on libESMTP supporting the AUTH
 (including the CRAM-MD5 and NTLM SASL mechanisms) and the StartTLS SMTP
