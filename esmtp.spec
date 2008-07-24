@@ -1,6 +1,6 @@
 %define name 	esmtp
 %define version 0.5.1
-%define release %mkrel 1
+%define release %mkrel 3
 
 Summary: 	User configurable relay-only Mail Transfer Agent (MTA)
 Name:		%name
