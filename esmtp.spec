@@ -1,6 +1,6 @@
 %define name 	esmtp
-%define version 0.5.1
-%define release %mkrel 3
+%define version 0.6.0
+%define release %mkrel 1
 
 Summary: 	User configurable relay-only Mail Transfer Agent (MTA)
 Name:		%name
@@ -9,7 +9,7 @@ Release:	%release
 # http://flow.dl.sourceforge.net/sourceforge/esmtp/
 Url:		http://esmtp.sourceforge.net
 Source0:	%name-%version.tar.bz2
-License:	GPL
+License:	GPLv2+
 Group:		Networking/Mail
 BuildRoot:	%_tmppath/%name-%version-%release-buildroot
 BuildRequires:	libesmtp-devel
