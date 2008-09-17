@@ -1,6 +1,6 @@
 %define name 	esmtp
 %define version 0.6.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: 	User configurable relay-only Mail Transfer Agent (MTA)
 Name:		%name
@@ -13,6 +13,7 @@ License:	GPLv2+
 Group:		Networking/Mail
 BuildRoot:	%_tmppath/%name-%version-%release-buildroot
 BuildRequires:	libesmtp-devel
+Provides:   sendmail-command
 
 %description
 ESMTP is a user configurable relay-only Mail Transfer Agent (MTA) with a
@@ -49,14 +50,13 @@ So these are ESMTP features:
 
 %post
 # sendmail-alternatives
-update-alternatives --install %_sbindir/sendmail sendmail %_bindir/%name 20
+update-alternatives --install %_sbindir/sendmail sendmail-command %_bindir/%name 20
 
 %postun
 # sendmail-alternatives
 if [ "$1" = 0 ]; then
-    update-alternatives --remove sendmail %_sbindir/sendmail
+    update-alternatives --remove sendmail-command  %_bindir/%name
 fi
-
 
 %clean
 %__rm -rf %buildroot
