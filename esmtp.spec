@@ -1,19 +1,15 @@
-%define name 	esmtp
-%define version 0.6.0
-%define release %mkrel 2
-
 Summary: 	User configurable relay-only Mail Transfer Agent (MTA)
-Name:		%name
-Version:	%version
-Release:	%release
-# http://flow.dl.sourceforge.net/sourceforge/esmtp/
-Url:		http://esmtp.sourceforge.net
-Source0:	%name-%version.tar.bz2
+Name:		esmtp
+Version:	1.0
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Networking/Mail
-BuildRoot:	%_tmppath/%name-%version-%release-buildroot
+# http://flow.dl.sourceforge.net/sourceforge/esmtp/
+URL:		http://esmtp.sourceforge.net
+Source0:	http://heanet.dl.sourceforge.net/sourceforge/esmtp/%{name}-%{version}.tar.bz2
 BuildRequires:	libesmtp-devel
-Provides:   sendmail-command
+Provides:	sendmail-command
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 ESMTP is a user configurable relay-only Mail Transfer Agent (MTA) with a
@@ -61,12 +57,9 @@ fi
 %clean
 %__rm -rf %buildroot
 
-
 %files
 %defattr(-,root,root)
 %doc AUTHORS README TODO ChangeLog sample.esmtprc
 %_bindir/%name
 %_mandir/man1/%name.1*
 %_mandir/man5/%{name}rc.5*
-
-
