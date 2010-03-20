@@ -1,7 +1,7 @@
 Summary: 	User configurable relay-only Mail Transfer Agent (MTA)
 Name:		esmtp
-Version:	1.0
-Release:	%mkrel 3
+Version:	1.2
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Networking/Mail
 # http://flow.dl.sourceforge.net/sourceforge/esmtp/
@@ -35,7 +35,7 @@ So these are ESMTP features:
 %build
 # Avoid making symlinks, this is done  by make alternatives.
 %__sed -i 's/\(.*LN_S.*\)/\#\1/' Makefile.in
-%configure
+%configure2_5x
 %make
 
 
