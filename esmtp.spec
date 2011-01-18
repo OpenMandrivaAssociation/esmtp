@@ -1,7 +1,7 @@
 Summary: 	User configurable relay-only Mail Transfer Agent (MTA)
 Name:		esmtp
 Version:	1.2
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2+
 Group:		Networking/Mail
 # http://flow.dl.sourceforge.net/sourceforge/esmtp/
@@ -44,6 +44,9 @@ So these are ESMTP features:
 %makeinstall
 %__install -d %buildroot%_sbindir
 
+install -d %{buildroot}%{_sysconfdir}
+install -m0644 sample.esmtprc %{buildroot}%{_sysconfdir}/esmtprc
+
 %post
 # sendmail-alternatives
 update-alternatives --install %_sbindir/sendmail sendmail-command %_bindir/%name 20
@@ -60,6 +63,7 @@ fi
 %files
 %defattr(-,root,root)
 %doc AUTHORS README TODO ChangeLog sample.esmtprc
+%config(noreplace) %{_sysconfdir}/esmtprc
 %_bindir/%name
 %_mandir/man1/%name.1*
 %_mandir/man5/%{name}rc.5*
