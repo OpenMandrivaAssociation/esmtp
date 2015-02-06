@@ -1,7 +1,7 @@
 Summary: 	User configurable relay-only Mail Transfer Agent (MTA)
 Name:		esmtp
 Version:	1.2
-Release:	%mkrel 3
+Release:	4
 License:	GPLv2+
 Group:		Networking/Mail
 # http://flow.dl.sourceforge.net/sourceforge/esmtp/
