@@ -5,7 +5,7 @@ Release:	4
 License:	GPLv2+
 Group:		Networking/Mail
 # http://flow.dl.sourceforge.net/sourceforge/esmtp/
-URL:		http://esmtp.sourceforge.net
+URL:		https://esmtp.sourceforge.net
 Source0:	http://heanet.dl.sourceforge.net/sourceforge/esmtp/%{name}-%{version}.tar.bz2
 BuildRequires:	libesmtp-devel
 Provides:	sendmail-command
