@@ -7,6 +7,11 @@ Group:		Networking/Mail
 # http://flow.dl.sourceforge.net/sourceforge/esmtp/
 URL:		https://esmtp.sourceforge.net
 Source0:	http://heanet.dl.sourceforge.net/sourceforge/esmtp/%{name}-%{version}.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libesmtp-devel
 Provides:	sendmail-command
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
